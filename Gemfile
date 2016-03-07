@@ -28,3 +28,14 @@ gem 'spring', group: :development
 gem 'rubocop', group: :development
 gem 'devise'
 gem 'rspec'
+
+gem 'cucumber'
+gem 'capybara'
+gem 'selenium-webdriver'
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
