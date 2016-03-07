@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p class="todo_list_sub_title">
+  <strong>Usuário:</strong>
+  <%= @todo_list.user_id %>
+  <br/>
+  <strong>Data de Vencimento:</strong>
+  <%= @todo_list.due_date %>
+</p>
+<p class="todo_list_sub_title">
+  <strong>Descrição:</strong>
+  <%= @todo_list.description %>
+</p>
+
+<div id="todo_items_wrapper">
+	<%= render @todo_list.todo_items %>
+	<div id="form">
+		<%= render "todo_items/form" %>
+	</div>
+</div>
+
+<div class="links">
+  <%= link_to 'Editar', edit_todo_list_path(@todo_list) %> |
+  <%= link_to 'Apagar', todo_list_path(@todo_list), method: :delete, data: { confirm: "Você tem certeza?" }
+ %> |
+  <%= link_to 'Voltar', todo_lists_path %>
+</div>
