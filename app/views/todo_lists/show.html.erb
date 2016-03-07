@@ -21,7 +21,8 @@
 
 <div class="links">
   <%= link_to 'Editar', edit_todo_list_path(@todo_list) %> |
-  <%= link_to 'Apagar', todo_list_path(@todo_list), method: :delete, data: { confirm: "Você tem certeza?" }
- %> |
+  <%= link_to 'Apagar', todo_list_path(@todo_list), 
+                        method: :delete, 
+                        data: { confirm: "Você tem certeza?" } %> |
   <%= link_to 'Voltar', todo_lists_path %>
 </div>
