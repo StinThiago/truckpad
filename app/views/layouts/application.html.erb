@@ -9,7 +9,23 @@
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+<div id="login">
+	<%if user_signed_in? %>
+		Você esta logado como <%= current_user.email %>, não é você?
+		<%= link_to "Desconectar", destroy_user_session_path, :method => :delete %>
+	<% else %>	
+		<%= link_to "Registre-se!", new_user_registration_path %> ou 
+		<%= link_to "Inicie uma Sessão", new_user_session_path %>
+	<% end %>
+
+	<% flash.each do |name, message|%>
+		<% content_tag :div, message, :id => "flash_#{name}"%>
+	<% end %>
+
+</div>
 <div class="container">
+	<p id="notice"><%= notice %></p>
+	<p id="alert"><%= alert %></p>
 	<%= yield %>
 </div>
 <script>
