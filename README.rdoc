@@ -10,11 +10,11 @@ Este teste deve ser realizado  e publicado num repositório público no Github.
 
 * [DONE] Usuários comuns podem logar, criar novos itens de TODO para ele, editar, excluir e marcar como finalizado
 
-* [WIP] Administradores podem administrar todos os registros
+* [DONE] Administradores podem administrar todos os registros (sem profile)
 
-* [DONE ]Criação de TODO deve ser simples e efetiva, possibilitando criar várias tasks rapidamente (utilizar ajax)
+* [DONE] Criação de TODO deve ser simples e efetiva, possibilitando criar várias tasks rapidamente (utilizar ajax)
 
-* [BKLOG] Os itens da lista de tarefas do usuário podem ser priorizados e ordenados
+* [TODO] Os itens da lista de tarefas do usuário podem ser priorizados e ordenados
 
 
 === O que será avaliado
