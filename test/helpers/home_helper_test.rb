@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'test/unit'
 
 class HomeHelperTest < ActionView::TestCase
 end

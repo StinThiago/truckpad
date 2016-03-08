@@ -5,6 +5,16 @@
 # files.
 
 require 'cucumber/rails'
+require 'rspec'
+require 'capybara/cucumber'	
+
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
+# The chromedriver-helper docs don't list this as a requirement.
+# We only know about it from other chrome driver docs.
+Capybara.javascript_driver = :chrome
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
