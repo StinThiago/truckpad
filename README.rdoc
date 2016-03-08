@@ -4,17 +4,17 @@ Este teste deve ser realizado  e publicado num repositório público no Github.
 
 === Objetivos:
 
-* Criar páginas e navegação
+* [DONE] Criar páginas e navegação
 
-* Adicionar um modelo de autenticação e perfis de usuário que permita usuários comuns e administradores
+* [DONE] Adicionar um modelo de autenticação e [WIP] perfis de usuário que permita usuários comuns e administradores
 
-* Usuários comuns podem logar, criar novos itens de TODO para ele, editar, excluir e marcar como finalizado
+* [DONE] Usuários comuns podem logar, criar novos itens de TODO para ele, editar, excluir e marcar como finalizado
 
-* Administradores podem administrar todos os registros
+* [WIP] Administradores podem administrar todos os registros
 
-* Criação de TODO deve ser simples e efetiva, possibilitando criar várias tasks rapidamente (utilizar ajax)
+* [DONE ]Criação de TODO deve ser simples e efetiva, possibilitando criar várias tasks rapidamente (utilizar ajax)
 
-* Os itens da lista de tarefas do usuário podem ser priorizados e ordenados
+* [BKLOG] Os itens da lista de tarefas do usuário podem ser priorizados e ordenados
 
 
 === O que será avaliado

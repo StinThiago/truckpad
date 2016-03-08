@@ -12,6 +12,14 @@
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
+	<%= f.fields_for :profile do |profile_form| %>
+	  <h2><%= profile_form.label :first_name %></h2>
+	  <p><%= profile_form.text_field :first_name %></p>
+
+	  <h2><%= profile_form.label :last_name %></h2>
+	  <p><%= profile_form.text_field :last_name %></p>
+	<% end %>
+
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 

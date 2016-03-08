@@ -1,10 +1,15 @@
 class TodoListsController < ApplicationController
   before_action :set_todo_list, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /todo_lists
   # GET /todo_lists.json
   def index
-    @todo_lists = TodoList.all
+    if user_signed_in? 
+      @todo_lists = current_user.todo_list.all
+    else
+      @todo_lists = TodoList.all
+    end
   end
 
   # GET /todo_lists/1
@@ -14,7 +19,8 @@ class TodoListsController < ApplicationController
 
   # GET /todo_lists/new
   def new
-    @todo_list = TodoList.new
+    #@todo_list = TodoList.new
+    @todo_list = current_user.todo_list.build
   end
 
   # GET /todo_lists/1/edit
@@ -24,7 +30,7 @@ class TodoListsController < ApplicationController
   # POST /todo_lists
   # POST /todo_lists.json
   def create
-    @todo_list = TodoList.new(todo_list_params)
+    @todo_list = current_user.todo_list.build(todo_list_params)
 
     respond_to do |format|
       if @todo_list.save
