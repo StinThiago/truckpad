@@ -11,7 +11,7 @@
 <body>
 
 <div class="container">
-	<div id="login">
+	<div id="login" class="todo_list_sub_title" >
 		<%if user_signed_in? %>
 			Você esta logado como <%= current_user.email %>, não é você?
 			<%= link_to "Desconectar", destroy_user_session_path, :method => :delete %>
@@ -22,10 +22,9 @@
 		<% flash.each do |name, message|%>
 			<% content_tag :div, message, :id => "flash_#{name}"%>
 		<% end %>
+		<p id="alert"><%= alert %></p>
 	</div>
-
-	<p id="notice"><%= notice %></p>
-	<p id="alert"><%= alert %></p>
+	
 	<%= yield %>
 </div>
 <script>
